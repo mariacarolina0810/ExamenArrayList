@@ -49,6 +49,12 @@ public class ExamenArrayList {
             }
         }
 
-              
+        for(int i=0; i<nombreE.size(); i++){
+            TotalTiempos += tiempoE.get(i);
+            System.out.println("Nombre: "+nombreE.get(i)+"\tVelocidad: "+velocidadE.get(i)+"\tTiempo: "+tiempoE.get(i));
+        }
+        TotalTiempos=TotalTiempos/tiempoE.size();
+        System.out.println("El promedio de tiempo de los estudiantes es: " +TotalTiempos);
+             
     }
 }
