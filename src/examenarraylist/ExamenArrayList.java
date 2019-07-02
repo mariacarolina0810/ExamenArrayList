@@ -55,6 +55,24 @@ public class ExamenArrayList {
         }
         TotalTiempos=TotalTiempos/tiempoE.size();
         System.out.println("El promedio de tiempo de los estudiantes es: " +TotalTiempos);
-             
+        int posicionmayor=0;
+        double nmayor = velocidadE.get(0);
+       for(int y=1; y<velocidadE.size(); y++){
+           if(velocidadE.get(y) > nmayor){
+               nmayor = velocidadE.get(y);
+               posicionmayor = y;
+           }
+       }
+       
+               System.out.println("El esttudiante más rapido es: " +nombreE.get(posicionmayor));
+               
+          int contador=0;
+          for(int j=0; j<tiempoE.size(); j++){
+            if(tiempoE.get(j)>TotalTiempos){
+                contador++;
+            }
+        }
+          System.out.println("Los estudiantes que tuvieron el tiempo por encima del promedio son: "+contador);
+                
     }
 }
